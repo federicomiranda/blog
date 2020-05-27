@@ -1,0 +1,50 @@
+.Header {
+  padding: 2.4rem 0;
+}
+
+.Header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header__title-link {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--colorPrincipal);
+}
+
+.Header__nav {
+  display: flex;
+}
+
+.Header__navItem {
+  margin-left: 4rem;
+}
+
+.Header__navA {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--colorPrincipal);
+  position: relative;
+  z-index: 1;
+}
+
+.Header__navA::before {
+  content: '';
+  display: block;
+  width: 110%;
+  height: 30%;
+  position: absolute;
+  left: -5%;
+  top: calc(50% - 15%);
+  background: var(--colorSecundario);
+  z-index: -1;
+  opacity: 0;
+}
+
+.Header__navA:hover::before {
+  opacity: 1;
+}

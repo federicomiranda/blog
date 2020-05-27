@@ -1,0 +1,10 @@
+.ListOfArticles {
+  margin-top: 2rem;
+  min-height: calc(100vh - 10.1rem);
+}
+
+.ListOfArticles__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}

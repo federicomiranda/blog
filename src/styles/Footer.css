@@ -1,0 +1,17 @@
+.Footer {
+  height: 5rem;
+  margin-top: 3rem;
+  background: var(--colorPrincipal);
+  color: white;
+}
+
+.Footer__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer__text {
+  font-size: 1.5rem;
+}
