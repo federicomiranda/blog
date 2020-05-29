@@ -1,6 +1,8 @@
 .ListOfArticles {
   margin-top: 2rem;
   min-height: calc(100vh - 10.1rem);
+  display: flex;
+  justify-content: center;
 }
 
 .ListOfArticles__container {

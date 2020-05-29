@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/ListOfArticles.css';
 import axios from 'axios';
+import { Ripple } from 'react-spinners-css';
 import ArticleHome from './ArticleHome';
 import BASE_URL from '../utils/api';
 
@@ -31,9 +32,13 @@ const ListOfArticles = () => {
 
   return (
     <main className="ListOfArticles">
-      <div className="container ListOfArticles__container">
-        {posts.map((article) => <ArticleHome key={article.id} {...article} />)}
-      </div>
+      {posts.length === 0
+        ? <Ripple color="#222" className="ListOfArticles__loader" />
+        : (
+          <div className="container ListOfArticles__container">
+            {posts.map((article) => <ArticleHome key={article.id} {...article} />)}
+          </div>
+        )}
     </main>
   );
 };
