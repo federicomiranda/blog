@@ -1,13 +1,14 @@
 .ArticleHome {
-  height: 200px;
+  height: 250px;
   border-radius: 2rem;
   border: 0.3rem solid var(--colorPrincipal);
   transition: box-shadow 0.2s;
   position: relative;
+  margin-bottom: 3rem;
 }
 
-.ArticleHome:hover {
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+.ArticleHome:last-child {
+  margin-bottom: 0;
 }
 
 .ArticleHome__link {
@@ -20,9 +21,9 @@
 }
 
 .ArticleHome__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .ArticleHome__text {
@@ -61,4 +62,19 @@
 .ArticleHome__tag-otros {
   background: #747474;
   color: white;
+}
+
+@media screen and (min-width: 1300px) {
+  .ArticleHome {
+    height: 200px;
+  }
+
+  .ArticleHome:hover {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  }
+
+  .ArticleHome__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
 }

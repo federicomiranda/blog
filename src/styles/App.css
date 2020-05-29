@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
 
 :root {
   --colorPrincipal: #222;
@@ -13,7 +13,7 @@
   line-height: 1;
   box-sizing: border-box;
   font-size: 10px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
 }
 
@@ -23,6 +23,13 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1300px) {
+  .container {
+    width: inherit;
+    max-width: 1200px;
+  }
 }

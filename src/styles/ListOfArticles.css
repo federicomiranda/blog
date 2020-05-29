@@ -4,7 +4,13 @@
 }
 
 .ListOfArticles__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  display: block;
+}
+
+@media screen and (min-width: 1300px) {
+  .ListOfArticles__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
 }
