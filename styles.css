@@ -4,8 +4,9 @@
     --mainColor: #222;
     --secondaryColor: #eee;
     --accentColor1: #e94444;
-    --accentColor2: #ffee00;
-    --accentColor3: #272cc9;
+    --accentColor2: #bfb647;
+    /* --accentColor2: #f9ed4c; */
+    --accentColor3: #373cc6;
   }
 
 * {
@@ -28,6 +29,39 @@ h6 {
     font-family: 'Nunito', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+a {
+    position: relative;
+}
+
+a:hover::before {
+    opacity: 0.5;
+}
+
+a::before {
+    content: "";
+    display: block;
+    width: 110%;
+    height: 50%;
+    position: absolute;
+    left: -5%;
+    top: calc(50% - 25%);
+    z-index: -1;
+    opacity: 0;
+  }
+
+a:nth-child(3n+1)::before {
+    background: var(--accentColor1);
+}
+
+a:nth-child(3n+2)::before {
+    background: var(--accentColor2);
+}
+
+a:nth-child(3n+3)::before {
+    background: var(--accentColor3);
 }
 
 .home__nav {
@@ -78,4 +112,171 @@ h6 {
 
 .home__header p {
     text-align: center;
+}
+
+.home__main {
+
+}
+
+.home__main .home__nav-links {
+    padding: 4rem;
+    justify-content: center;
+}
+
+.home__main .home__nav-links li:first-child {
+    margin-left:  0;
+}
+
+.home__path-card-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.home__path-card-list > li  {
+
+}
+
+.home__path-card-list div {
+    min-width: 100%;
+    width: 300px;
+    text-align: center;
+    height: 100%;
+    background: var(--secondaryColor);
+    border-radius: 5px;
+    position: relative;
+}
+
+.home__path-card-list header {
+    padding: 30px;
+    border-bottom: 2px solid white;
+}
+
+.home__path-card-list .logo {
+    font-style: normal;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* triangulo rojo */
+.home__path-card-list > li:nth-child(1) div::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid var(--accentColor1);
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    transform: rotate(45deg);
+    display: block;
+}
+
+/* cuadrado rojo */
+.home__path-card-list > li:nth-child(1) div::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: var(--accentColor1);
+    position: absolute;
+    right: -20px;
+    bottom: 20px;
+    transform: rotate(-24deg);
+    display: block;
+}
+
+.home__path-card-list > li:nth-child(1) .logo {
+    color:var(--accentColor1);
+}
+
+.home__path-card-list ul {
+    padding: 30px;
+}
+
+.home__path-card-list > li:nth-child(2) div {
+    /* background: var(--accentColor2) */
+}
+
+.home__path-card-list > li:nth-child(2) .logo {
+    color:var(--accentColor2);
+}
+
+/* triangulo amarillo */
+.home__path-card-list > li:nth-child(2) div::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid var(--accentColor2);
+    position: absolute;
+    right: -10px;
+    top: 30px;
+    transform: rotate(-23deg);
+    display: block;
+}
+
+/* circulo amarillo */
+.home__path-card-list > li:nth-child(2) div::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accentColor2);
+    position: absolute;
+    left: -10px;
+    top: 120px;
+    transform: rotate(-45deg);
+    display: block;
+}
+
+.home__path-card-list > li:nth-child(3) div {
+    /* background: var(--accentColor3) */
+}
+
+.home__path-card-list > li:nth-child(3) .logo {
+    color:var(--accentColor3);
+}
+
+/* cuadrado azul */
+.home__path-card-list > li:nth-child(3) div::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: var(--accentColor3);
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    transform: rotate(-54deg);
+    display: block;
+}
+
+/* circulo azul */
+.home__path-card-list > li:nth-child(3) div::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accentColor3);
+    position: absolute;
+    right: -10px;
+    bottom: 10px;
+    transform: rotate(-45deg);
+    display: block;
+}
+
+footer {
+    background: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+footer h3 {
+    color: white;
 }
