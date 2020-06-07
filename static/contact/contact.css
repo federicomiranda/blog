@@ -1,0 +1,75 @@
+:root {
+    --mainColor: #222;
+    --secondaryColor: #e7e8ec;
+    --accentColor1: #e94444;
+    --accentColor2: #bfb647;
+    --accentColor3: #373cc6;
+  }
+
+main h2 {
+    text-align: center;
+    position: relative;
+}
+
+main header {
+    padding: 8rem;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 8rem;
+    align-items: center;
+}
+
+main form input,
+main form textarea {
+    margin-bottom: 1rem;
+    border: none;
+    background: var(--secondaryColor);
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+main form input[type=submit] {
+    margin-top: 3rem;
+    max-width: 200px;
+    background: white;
+    border-radius: 0;
+    border: 2px solid var(--accentColor1);
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+main::before,
+main::after {
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+main::before {
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    border: 10px solid var(--accentColor3);
+    top: 15vh;
+    left: 10vh;
+}
+
+main::after {
+    width: 35vh;
+    height: 35vh;
+    transform: rotate(30deg);
+    border: 10px solid var(--accentColor2);
+    bottom: 8vh;
+    right: 10vh;
+}

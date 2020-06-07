@@ -1,0 +1,47 @@
+:root {
+    --mainColor: #222;
+    --secondaryColor: #e7e8ec;
+    --accentColor1: #e94444;
+    --accentColor2: #bfb647;
+    --accentColor3: #373cc6;
+  }
+
+main,
+section {
+    padding: 4rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main header {
+    padding: 4rem 0;
+}
+
+main > div {
+    max-width: 500px;
+    border: 2px solid var(--mainColor);
+    padding: 2rem;
+}
+
+main > div:nth-child(3) {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+main h2,
+section h3 {
+    text-align: center;
+}
+
+section h3 {
+    margin: 4rem;
+    margin-top: 0;
+}
+
+section p {
+    margin: auto;
+    max-width: 800px;
+}
