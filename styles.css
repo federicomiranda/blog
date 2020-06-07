@@ -163,17 +163,27 @@ a:nth-child(3n+3)::before {
 }
 
 .home__path-card-list > li  {
+    display: flex;
+}
 
+.home__path-card-list ul {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .home__path-card-list div {
     min-width: 100%;
     width: 300px;
     text-align: center;
-    height: 100%;
     background: var(--secondaryColor);
     border-radius: 5px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
 }
 
 .home__path-card-list header {
@@ -183,7 +193,7 @@ a:nth-child(3n+3)::before {
 
 .home__path-card-list .logo {
     font-style: normal;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
@@ -220,10 +230,6 @@ a:nth-child(3n+3)::before {
 
 .home__path-card-list > li:nth-child(1) .logo {
     color:var(--accentColor1);
-}
-
-.home__path-card-list ul {
-    padding: 30px;
 }
 
 .home__path-card-list > li:nth-child(2) div {
@@ -317,6 +323,7 @@ a:nth-child(3n+3)::before {
 .home__info-right {
     align-self: flex-end;
     margin-right: 4em;
+    text-align: right;
 }
 
 .home__info-left {
@@ -385,6 +392,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 4rem;
 }
 
 footer h3 {
